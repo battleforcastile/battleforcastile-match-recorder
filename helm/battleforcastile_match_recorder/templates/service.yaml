@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name }}-battleforcastile-match-recorder-service
+  labels:
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+  annotations:
+    prometheus.io/scrape: 'true'
+    prometheus.io/port: '{{ .Values.service.port }}'
+spec:
+  ports:
+  - port: {{ .Values.service.port }} # Port in the CLUSTER to communicate internally
+    targetPort: {{ .Values.service.port }} # Port in the POD to communicate internally
+    protocol: TCP
+  selector:
+    # Here we select the Pods that are going to be targeted by this Service
+    name: {{ .Release.Name }}-battleforcastile-match-recorder
+  type: {{ .Values.service.type }}
+
