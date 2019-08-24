@@ -19,11 +19,11 @@ spec:
         release: {{ .Release.Name }}
     spec:
       volumes:
-        - name: cloudsql-instance-credentials
+        - name: battleforcastile-match-recorder-cloudsql-instance-credentials
           secret:
-            secretName: cloudsql-instance-credentials
+            secretName: battleforcastile-match-recorder-cloudsql-instance-credentials
       containers:
-        - name: cloudsql-proxy
+        - name: battleforcastile-match-recorder-cloudsql-proxy
           image: "{{ .Values.image_cloudsql_proxy.repository }}:{{ .Values.image_cloudsql_proxy.tag }}"
           imagePullPolicy: {{ .Values.image_cloudsql_proxy.pullPolicy }}
           command: ["/cloud_sql_proxy",
@@ -38,7 +38,7 @@ spec:
             allowPrivilegeEscalation: false
           # [END cloudsql_security_context]
           volumeMounts:
-            - name: cloudsql-instance-credentials
+            - name: battleforcastile-match-recorder-cloudsql-instance-credentials
               mountPath: /secrets/cloudsql
               readOnly: true
         - name: battleforcastile-match-recorder
