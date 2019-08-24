@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ .Release.Name }}-battleforcastile-match-recorder-service
+  name: battleforcastile-match-recorder-service
   labels:
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
@@ -15,6 +15,6 @@ spec:
     protocol: TCP
   selector:
     # Here we select the Pods that are going to be targeted by this Service
-    name: {{ .Release.Name }}-battleforcastile-match-recorder
+    name: battleforcastile-match-recorder
   type: {{ .Values.service.type }}
 

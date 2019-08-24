@@ -1,5 +1,5 @@
 apiVersion: v1
 appVersion: "1.0"
 description: A Helm chart for Battle for Castile - Match Recorder service
-name: helm
-version: 0.1.6
+name: battleforcastile-match-recorder
+version: 0.1.7

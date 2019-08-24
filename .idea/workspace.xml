@@ -3,11 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="55292753-c795-4966-bd56-61a3484e23ac" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/battleforcastile_match_recorder/endpoints/matches.py" beforeDir="false" afterPath="$PROJECT_DIR$/battleforcastile_match_recorder/endpoints/matches.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/battleforcastile_match_recorder/endpoints/turns.py" beforeDir="false" afterPath="$PROJECT_DIR$/battleforcastile_match_recorder/endpoints/turns.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/battleforcastile_match_recorder/serializers/matches.py" beforeDir="false" afterPath="$PROJECT_DIR$/battleforcastile_match_recorder/serializers/matches.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/matches/test_match_path.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/matches/test_match_path.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/turns/test_turns_post.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/turns/test_turns_post.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helm/battleforcastile_match_recorder/Chart.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/helm/battleforcastile_match_recorder/Chart.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helm/battleforcastile_match_recorder/templates/NOTES.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/helm/battleforcastile_match_recorder/templates/deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/helm/battleforcastile_match_recorder/templates/deployment.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helm/battleforcastile_match_recorder/templates/ingress.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/helm/battleforcastile_match_recorder/templates/service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/helm/battleforcastile_match_recorder/templates/service.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helm/battleforcastile_match_recorder/templates_examples/battleforcastile_match_recorder_secrets.yml" beforeDir="false" afterPath="$PROJECT_DIR$/helm/battleforcastile_match_recorder/templates_examples/battleforcastile_match_recorder_secrets.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -115,7 +116,9 @@
       <option name="presentableId" value="Default" />
       <updated>1566644364534</updated>
       <workItem from="1566644365698" duration="101000" />
-      <workItem from="1566644468895" duration="3168000" />
+      <workItem from="1566644468895" duration="3202000" />
+      <workItem from="1566647971033" duration="3940000" />
+      <workItem from="1566672097484" duration="124000" />
     </task>
     <task id="LOCAL-00001" summary="Remove User Model from Micro-service. Adapt models">
       <created>1566647231778</created>
