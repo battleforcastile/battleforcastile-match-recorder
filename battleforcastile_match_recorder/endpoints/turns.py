@@ -4,7 +4,7 @@ from flask import request, abort
 from flask_restful import Resource
 
 from battleforcastile_match_recorder import db
-from battleforcastile_match_recorder.models import Turn, User, Match
+from battleforcastile_match_recorder.models import Turn, Match
 from battleforcastile_match_recorder.serializers.turns import serialize_turn
 
 
@@ -20,8 +20,8 @@ class TurnListResource(Resource):
         # Validate request
         if (
                 not data.get('number') or
-                not data.get('hero') or
-                not data.get('enemy') or
+                not data.get('hero_username') or
+                not data.get('enemy_username') or
                 not data.get('state') or
                 data.get('num_cards_in_hand_left') is None
         ):
@@ -31,14 +31,11 @@ class TurnListResource(Resource):
         if not match:
             abort(400)
 
-        hero = User.query.filter_by(username=data['hero']).first()
-        enemy = User.query.filter_by(username=data['enemy']).first()
-
         turn = Turn(
             match=match,
             number=data['number'],
-            hero=hero,
-            enemy=enemy,
+            hero_username=data.get('hero_username'),
+            enemy_username=data.get('enemy_username'),
             state=json.dumps(data['state']),
             num_cards_in_hand_left=data['num_cards_in_hand_left']
         )
@@ -54,7 +51,7 @@ class TurnListResource(Resource):
 class TurnResource(Resource):
     def get(self, match_id, turn_number, hero_username):
         turn = Turn.query.filter(Turn.match.has(id=match_id)).filter(
-            Turn.hero.has(username=hero_username)).filter_by(number=turn_number).first()
+            Turn.hero_username == hero_username).filter_by(number=turn_number).first()
         if turn:
             return serialize_turn(turn), 200
         return '', 404

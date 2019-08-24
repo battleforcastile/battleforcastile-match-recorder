@@ -5,7 +5,7 @@
 replicaCount: 1
 
 database:
-  instance_connection_name: <not_defined>
+  instance_connection_name: battle-for-castile:europe-west1:battleforcastile-prod  # Change this for your instance
 
 image_battleforcastile_match_recorder:
   repository: battleforcastile/battleforcastile-match-recorder

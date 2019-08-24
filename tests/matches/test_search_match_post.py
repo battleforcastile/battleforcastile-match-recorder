@@ -5,13 +5,11 @@ from battleforcastile_match_recorder.models import Match
 from battleforcastile_match_recorder.serializers.matches import serialize_match
 
 
-def test_search_match_if_there_are_matches_available(init_database, test_client, user1):
-    db.session.add(user1)
-    db.session.commit()
+def test_search_match_if_there_are_matches_available(init_database, test_client, user1_username):
 
     new_match = {
         'first_user': {
-            'username': user1.username,
+            'username': user1_username,
             'character': {
                 "meta": {
                     "name": "Black Forest Elf",
@@ -49,7 +47,8 @@ def test_search_match_if_there_are_matches_available(init_database, test_client,
     rv = test_client.post('/api/v1/matches/search/', data=json.dumps(finding_match))
     assert rv.status_code == 200
 
-    found_match = Match.query.filter_by(first_user=user1).filter(Match.second_user!=None).first()
+    found_match = Match.query.filter_by(
+        first_user_username=user1_username).filter(Match.second_user_username!=None).first()
 
     assert rv.status_code == 200
     assert serialize_match(found_match) == json.loads(rv.data)
@@ -97,9 +96,7 @@ def test_search_match_returns_400_when_payload_is_incomplete(init_database, test
 
 
 def test_search_match_returns_204_if_there_are_no_matches_available(
-        init_database, test_client, user1):
-    db.session.add(user1)
-    db.session.commit()
+        init_database, test_client):
 
     finding_match = {
         'user': {
@@ -124,13 +121,10 @@ def test_search_match_returns_204_if_there_are_no_matches_available(
 
 
 def test_search_match_returns_204_if_there_are_no_matches_available_because_the_same_user_has_create_them(
-        init_database, test_client, user1):
-    db.session.add(user1)
-    db.session.commit()
-
+        init_database, test_client, user1_username):
     new_match = {
         'first_user': {
-            'username': user1.username,
+            'username': user1_username,
             'character': {
                 "meta": {
                     "name": "Black Forest Elf",
@@ -149,7 +143,7 @@ def test_search_match_returns_204_if_there_are_no_matches_available_because_the_
 
     finding_match = {
         'user': {
-            'username': user1.username,
+            'username': user1_username,
             'character': {
                 "meta": {
                     "name": "Black Forest Elf",

@@ -3,13 +3,13 @@ def serialize_match(match):
         'id': match.id,
         'turns': [turn.id for turn in match.turns],
         'first_user': {
-            'username': match.first_user.username,
+            'username': match.first_user_username,
             'character': match.first_user_character
         },
        'second_user': {
-           'username': match.second_user.username if match.second_user else None,
+           'username': match.second_user_username if match.second_user_username else None,
            'character': match.second_user_character if match.second_user_character else None
        },
-        'winner': match.winner.username if match.winner else None,
+        'winner_username': match.winner_username if match.winner_username else None,
         'finished': match.finished
     }

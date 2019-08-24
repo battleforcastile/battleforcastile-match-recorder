@@ -16,9 +16,8 @@ def test_turns_returns_405_if_method_is_not_allowed(init_database, test_client):
     assert rv.status_code == 405
 
 
-def test_turns_returns_empty_response_when_there_are_no_turns(init_database, test_client, user1, user2, match):
-    db.session.add(user1)
-    db.session.add(user2)
+def test_turns_returns_empty_response_when_there_are_no_turns(
+        init_database, test_client, user1_username, user2_username, match):
     db.session.add(match)
     db.session.commit()
 
@@ -26,9 +25,8 @@ def test_turns_returns_empty_response_when_there_are_no_turns(init_database, tes
     assert b'' in rv.data
 
 
-def test_turns_returns_content_when_there_are_turns(init_database, test_client, user1, user2, match, turn):
-    db.session.add(user1)
-    db.session.add(user2)
+def test_turns_returns_content_when_there_are_turns(
+        init_database, test_client, user1_username, user2_username, match, turn):
     db.session.add(match)
     db.session.add(turn)
     db.session.commit()

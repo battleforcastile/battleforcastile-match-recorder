@@ -20,23 +20,19 @@ def test_turn_returns_405_if_method_is_not_allowed(init_database, test_client):
 
 
 def test_turn_returns_empty_response_when_there_are_no_turns_with_that_number_and_hero(
-        init_database, test_client, user1, user2, match):
-    db.session.add(user1)
-    db.session.add(user2)
+        init_database, test_client, user1_username, user2_username, match):
     db.session.add(match)
     db.session.commit()
     turn_number = 1
 
-    rv = test_client.get(f'/api/v1/matches/{match.id}/turns/{turn_number}/hero/{user1.username}/')
+    rv = test_client.get(f'/api/v1/matches/{match.id}/turns/{turn_number}/hero/{user1_username}/')
 
     assert rv.status_code == 404
     assert b'' in rv.data
 
 
 def test_turn_returns_empty_response_when_there_are_turns_with_that_number_but_not_hero(
-        init_database, test_client, user1, user2, match, turn):
-    db.session.add(user1)
-    db.session.add(user2)
+        init_database, test_client, user1_username, user2_username, match, turn):
     db.session.add(match)
     db.session.add(turn)
     db.session.commit()
@@ -50,15 +46,13 @@ def test_turn_returns_empty_response_when_there_are_turns_with_that_number_but_n
 
 
 def test_turn_returns_content_when_there_are_turns_with_that_number_and_hero(
-        init_database, test_client, user1, user2, match, turn):
-    db.session.add(user1)
-    db.session.add(user2)
+        init_database, test_client, user1_username, user2_username, match, turn):
     db.session.add(match)
     db.session.add(turn)
     db.session.commit()
 
     expected_response = serialize_turn(turn)
-    rv = test_client.get(f'/api/v1/matches/{match.id}/turns/{turn.number}/hero/{user1.username}/')
+    rv = test_client.get(f'/api/v1/matches/{match.id}/turns/{turn.number}/hero/{user1_username}/')
 
     assert rv.status_code == 200
     assert expected_response == json.loads(rv.data)

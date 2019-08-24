@@ -1,5 +1,7 @@
 # Battle For Castile: Match Recorder
 
+This micro-service handles the Match recording process.
+
 ## 1. Installation and set up
 
 This guide assumes that there's a K8s cluster and Postgres SQL DB set up in Google Cloud.
@@ -7,6 +9,7 @@ Google cloud only allows access to its DB using a proxy container, so we need to
 proxy-user first
 
 > Make sure to active the following API first: https://console.developers.google.com/apis/api/sqladmin.googleapis.com/overview?project=678954142891
+> If you have already set up another micro-service from this organization, probably you can omit the steps between 1.1 - 1.5 (proxy-user creation)
 
 #### 1.1 Create proxy-user (for SQL instance proxy)
 ```

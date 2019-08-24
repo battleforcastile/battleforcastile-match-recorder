@@ -24,9 +24,8 @@ def test_patch_match_returns_404_when_there_are_match_with_that_id(init_database
     assert b'' in rv.data
 
 
-def test_patch_match_returns_400_when_the_first_user_provided_is_unknown(init_database, test_client, user1, user2, match):
-    db.session.add(user1)
-    db.session.add(user2)
+def test_patch_match_returns_200_when_the_first_user_provided_is_unknown(
+        init_database, test_client, user1_username, user2_username, match):
     db.session.add(match)
 
     db.session.commit()
@@ -49,12 +48,11 @@ def test_patch_match_returns_400_when_the_first_user_provided_is_unknown(init_da
 
     rv = test_client.patch(f'/api/v1/matches/{match.id}/', data=json.dumps(changed_match))
 
-    assert rv.status_code == 400
+    assert rv.status_code == 200
 
 
-def test_patch_match_returns_400_when_the_second_user_provided_is_unknown(init_database, test_client, user1, user2, match):
-    db.session.add(user1)
-    db.session.add(user2)
+def test_patch_match_returns_200_when_the_second_user_provided_is_unknown(
+        init_database, test_client, user1_username, user2_username, match):
     db.session.add(match)
 
     db.session.commit()
@@ -77,12 +75,11 @@ def test_patch_match_returns_400_when_the_second_user_provided_is_unknown(init_d
 
     rv = test_client.patch(f'/api/v1/matches/{match.id}/', data=json.dumps(changed_match))
 
-    assert rv.status_code == 400
+    assert rv.status_code == 200
 
 
-def test_patch_match_returns_400_when_payload_is_incomplete(init_database, test_client, user1, user2, match):
-    db.session.add(user1)
-    db.session.add(user2)
+def test_patch_match_returns_400_when_payload_is_incomplete(
+        init_database, test_client, user1_username, user2_username, match):
     db.session.add(match)
 
     db.session.commit()
@@ -160,16 +157,15 @@ def test_patch_match_returns_400_when_payload_is_incomplete(init_database, test_
     assert rv.status_code == 400
 
 
-def test_patch_match_returns_200_when_it_has_been_successfully_patched(init_database, test_client, user1, user2, match):
-    db.session.add(user1)
-    db.session.add(user2)
+def test_patch_match_returns_200_when_it_has_been_successfully_patched(
+        init_database, test_client, user1_username, user2_username, match):
     db.session.add(match)
 
     db.session.commit()
 
     changed_match = {
         'first_user': {
-            'username': user1.username,
+            'username': user1_username,
             'character': {
                 "meta": {
                     "name": "Black Forest Elf",
@@ -182,7 +178,7 @@ def test_patch_match_returns_200_when_it_has_been_successfully_patched(init_data
             }
         },
         'second_user': {
-            'username': user2.username,
+            'username': user2_username,
             'character': {
                 "meta": {
                     "name": "Black Forest Elf",
@@ -194,7 +190,7 @@ def test_patch_match_returns_200_when_it_has_been_successfully_patched(init_data
                 "powers": []
             }
         },
-        'winner': user1.username,
+        'winner_username': user1_username,
         'finished': True
     }
 
@@ -208,5 +204,5 @@ def test_patch_match_returns_200_when_it_has_been_successfully_patched(init_data
         rv.data)['first_user']['character']
     assert str(changed_match['second_user']['character']['stats']['level']) in json.loads(
         rv.data)['second_user']['character']
-    assert user1.username == json.loads(rv.data)['winner']
+    assert user1_username == json.loads(rv.data)['winner_username']
     assert json.loads(rv.data)['finished'] == True

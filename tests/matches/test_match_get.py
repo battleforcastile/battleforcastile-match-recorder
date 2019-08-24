@@ -24,9 +24,7 @@ def test_match_returns_empty_response_when_there_are_match_with_that_id(init_dat
 
 
 def test_match_returns_content_when_there_is_a_match_with_that_id(
-        init_database, test_client, user1, user2, match):
-    db.session.add(user1)
-    db.session.add(user2)
+        init_database, test_client, user1_username, user2_username, match):
     db.session.add(match)
     db.session.commit()
 

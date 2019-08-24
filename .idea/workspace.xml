@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8b3e0b9f-c757-4e5e-b765-40a15c69645d" name="Default Changelist" comment="" />
+    <list default="true" id="55292753-c795-4966-bd56-61a3484e23ac" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/battleforcastile_match_recorder/endpoints/matches.py" beforeDir="false" afterPath="$PROJECT_DIR$/battleforcastile_match_recorder/endpoints/matches.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/battleforcastile_match_recorder/endpoints/turns.py" beforeDir="false" afterPath="$PROJECT_DIR$/battleforcastile_match_recorder/endpoints/turns.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/battleforcastile_match_recorder/serializers/matches.py" beforeDir="false" afterPath="$PROJECT_DIR$/battleforcastile_match_recorder/serializers/matches.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/matches/test_match_path.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/matches/test_match_path.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/turns/test_turns_post.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/turns/test_turns_post.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Flask Main" />
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../battleforcastile-match-recorder" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1PA5JFYYnMh9LwnnVONjeQHEPsl" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1Pru6xJ7RrymL4NF6Xkeis7RzMG" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -28,22 +26,6 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/helm/templates_examples" />
-      <recent name="$PROJECT_DIR$/helm" />
-      <recent name="$PROJECT_DIR$/helm/templates/prod" />
-      <recent name="$PROJECT_DIR$/helm/templates" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/tests" />
-      <recent name="$PROJECT_DIR$/microverse_brain/endpoints" />
-      <recent name="$PROJECT_DIR$/helm/templates/prod" />
-      <recent name="$PROJECT_DIR$/helm/templates" />
-      <recent name="$PROJECT_DIR$/microverse_brain" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -57,8 +39,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for tests.matches.test_match_path.test_patch_match_returns_200_when_it_has_been_successfully_patched">
-    <configuration default="true" type="DjangoTestsConfigurationType">
+  <component name="RunManager" selected="Python tests.pytest in test_match_path.py">
+    <configuration name="test_match_path" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="battleforcastile-match-recorder" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -66,58 +48,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/matches" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="TARGET" value="" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
-      <module name="battleforcastile-match-recorder" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="ADDITIONAL_ARGS" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
-      <module name="battleforcastile-match-recorder" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="ADDITIONAL_ARGS" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <module name="battleforcastile-match-recorder" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/matches/test_match_path.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -126,71 +62,12 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="Python.FlaskServer">
-      <module name="battleforcastile-match-recorder" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration name="microverse-brain" type="Python.FlaskServer">
-      <module name="battleforcastile-match-recorder" />
-      <option name="target" value="$PROJECT_DIR$/app.py" />
-      <option name="targetType" value="PATH" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../battleforcastile-match-recorder" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <module name="battleforcastile-match-recorder" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Doctests">
-      <module name="battleforcastile-match-recorder" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="tests" factoryName="py.test">
       <module name="battleforcastile-match-recorder" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -201,93 +78,29 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for tests.matches.test_match_path" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest in test_match_path.py" type="tests" factoryName="py.test" nameIsGenerated="true">
       <module name="battleforcastile-match-recorder" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../battleforcastile-match-recorder/tests/matches" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.matches.test_match_path&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/matches/test_match_path.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for tests.matches.test_match_path.test_patch_match_returns_200_when_it_has_been_successfully_patched" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="battleforcastile-match-recorder" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../battleforcastile-match-recorder/tests/matches" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.matches.test_match_path.test_patch_match_returns_200_when_it_has_been_successfully_patched&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest for tests.turns.test_turn_get.test_turn_returns_content_when_there_are_turns_with_that_number_and_hero" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="battleforcastile-match-recorder" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../battleforcastile-match-recorder/tests/turns" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.turns.test_turn_get.test_turn_returns_content_when_there_are_turns_with_that_number_and_hero&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest for tests.turns.test_turns_post.test_turns_are_successfully_created" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="battleforcastile-match-recorder" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../battleforcastile-match-recorder/tests/turns" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.turns.test_turns_post.test_turns_are_successfully_created&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest for tests.turns.test_turns_post.test_turns_returns_204_if_turn_already_exists" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="battleforcastile-match-recorder" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../battleforcastile-match-recorder/tests/turns" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.turns.test_turns_post.test_turns_returns_204_if_turn_already_exists&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
+    <list>
+      <item itemvalue="Python.test_match_path" />
+      <item itemvalue="Python tests.pytest in test_match_path.py" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest for tests.matches.test_match_path.test_patch_match_returns_200_when_it_has_been_successfully_patched" />
-        <item itemvalue="Python tests.pytest for tests.turns.test_turns_post.test_turns_returns_204_if_turn_already_exists" />
-        <item itemvalue="Python tests.pytest for tests.turns.test_turns_post.test_turns_are_successfully_created" />
-        <item itemvalue="Python tests.pytest for tests.turns.test_turn_get.test_turn_returns_content_when_there_are_turns_with_that_number_and_hero" />
-        <item itemvalue="Python tests.pytest for tests.matches.test_match_path" />
+        <item itemvalue="Python.test_match_path" />
       </list>
     </recent_temporary>
   </component>
@@ -296,88 +109,22 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8b3e0b9f-c757-4e5e-b765-40a15c69645d" name="Default Changelist" comment="" />
-      <created>1565303986789</created>
+      <changelist id="55292753-c795-4966-bd56-61a3484e23ac" name="Default Changelist" comment="" />
+      <created>1566644364534</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1565303986789</updated>
-      <workItem from="1565303987938" duration="116000" />
-      <workItem from="1565304118281" duration="553000" />
-      <workItem from="1565456652953" duration="77000" />
-      <workItem from="1565456754424" duration="22000" />
-      <workItem from="1565456903328" duration="34000" />
-      <workItem from="1565456945012" duration="2000" />
-      <workItem from="1565456955903" duration="63000" />
-      <workItem from="1565457026772" duration="3158000" />
-      <workItem from="1565464119754" duration="36576000" />
-      <workItem from="1565708029621" duration="11324000" />
-      <workItem from="1565900353160" duration="45498000" />
-      <workItem from="1566162282560" duration="7396000" />
+      <updated>1566644364534</updated>
+      <workItem from="1566644365698" duration="101000" />
+      <workItem from="1566644468895" duration="3168000" />
     </task>
-    <task id="LOCAL-00001" summary="Refactor the &quot;turns&quot; endpoint so it's always assigned to a match (e.g., /api/v1/matches/&lt;match_id&gt;/turns/)">
-      <created>1565895000102</created>
+    <task id="LOCAL-00001" summary="Remove User Model from Micro-service. Adapt models">
+      <created>1566647231778</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1565895000102</updated>
+      <updated>1566647231778</updated>
     </task>
-    <task id="LOCAL-00002" summary="Add endpoint to get a single turn based on its 'turn_number' (e.g., /api/v1/matches/&lt;match_id&gt;/turns/&lt;turn_number&gt;/)">
-      <created>1565895570323</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1565895570323</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Add &quot;hero&quot; to the &quot;TurnDetail&quot; endpoint">
-      <created>1565978124629</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1565978124629</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Refactor the code so it integrates with the CLI tool">
-      <created>1566038559447</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1566038559447</updated>
-    </task>
-    <task id="LOCAL-00005" summary="BUGFIX: Turns (GET endpoint) wasn't returning the right data">
-      <created>1566043004390</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1566043004390</updated>
-    </task>
-    <task id="LOCAL-00006" summary="BUGFIX: Avoid creating tables on the first request (Alembic already does it)">
-      <created>1566070423187</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1566070423187</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Add Prometheus python client. Create initial custom metric to track the number of total matches created">
-      <created>1566115826558</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1566115826558</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Upgrade Helm chart to 0.1.4">
-      <created>1566116139999</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1566116139999</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Add Prometheus metrics. Adapt the backend to the new CLI version">
-      <created>1566325821858</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1566325821858</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,66 +144,34 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactor the &quot;turns&quot; endpoint so it's always assigned to a match (e.g., /api/v1/matches/&lt;match_id&gt;/turns/)" />
-    <MESSAGE value="Add endpoint to get a single turn based on its 'turn_number' (e.g., /api/v1/matches/&lt;match_id&gt;/turns/&lt;turn_number&gt;/)" />
-    <MESSAGE value="Add &quot;hero&quot; to the &quot;TurnDetail&quot; endpoint" />
-    <MESSAGE value="Refactor the code so it integrates with the CLI tool" />
-    <MESSAGE value="BUGFIX: Turns (GET endpoint) wasn't returning the right data" />
-    <MESSAGE value="BUGFIX: Avoid creating tables on the first request (Alembic already does it)" />
-    <MESSAGE value="Add Prometheus python client. Create initial custom metric to track the number of total matches created" />
-    <MESSAGE value="Upgrade Helm chart to 0.1.4" />
-    <MESSAGE value="Add Prometheus metrics. Adapt the backend to the new CLI version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Prometheus metrics. Adapt the backend to the new CLI version" />
+    <MESSAGE value="Remove User Model from Micro-service. Adapt models" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove User Model from Micro-service. Adapt models" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../battleforcastile-match-recorder/tests/users/test_users_post.py</url>
-          <line>18</line>
-          <option name="timeStamp" value="10" />
+          <url>file://$PROJECT_DIR$/tests/matches/test_matches_post.py</url>
+          <line>45</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../battleforcastile-match-recorder/tests/turns/test_turns_post.py</url>
-          <line>81</line>
-          <option name="timeStamp" value="27" />
+          <url>file://$PROJECT_DIR$/tests/matches/test_match_path.py</url>
+          <line>206</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="tests">
-        <watch expression="rv.data" language="Python" />
-        <watch expression="json.dumps([[], []])" language="Python" />
-        <watch expression="serialize_turn(created_turn)" language="Python" />
         <watch expression="json.loads(rv.data)" language="Python" />
         <watch expression="json.loads(rv.data)" language="Python" />
-        <watch expression="serialize_turn(created_turn)" language="Python" />
-        <watch expression="json.loads(rv.data)" language="Python" />
-        <watch expression="serialize_turn(created_turn)" language="Python" />
-        <watch expression="json.loads('[[], []]')" language="Python" />
-        <watch expression="data['num_cards_in_hand_left']" language="Python" />
-        <watch expression="turn" language="Python" />
-        <watch expression="serialize_turn(created_turn)" language="Python" />
-        <watch expression="rv.content" language="Python" />
-        <watch expression="rv" language="Python" />
-        <watch expression="Turn.query.all()" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/microverse_brain$microverse_brain.coverage" NAME="microverse-brain Coverage Results" MODIFIED="1565304648793" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/microverse_brain$pytest_in_test_users_get_py.coverage" NAME="pytest in test_users_get.py Coverage Results" MODIFIED="1565889641961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/users" />
-    <SUITE FILE_PATH="coverage/microverse_brain$pytest_for_test_turns_post_test_turns_are_successfully_created.coverage" NAME="pytest for test_turns_post.test_turns_are_successfully_created Coverage Results" MODIFIED="1566334248879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/turns" />
-    <SUITE FILE_PATH="coverage/microverse_brain$pytest_in_test_users_post_py.coverage" NAME="pytest in test_users_post.py Coverage Results" MODIFIED="1565889687520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/users" />
-    <SUITE FILE_PATH="coverage/microverse_brain$pytest_in_test_matches_post_py.coverage" NAME="pytest in test_matches_post.py Coverage Results" MODIFIED="1565889260856" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/matches" />
-    <SUITE FILE_PATH="coverage/microverse_brain$pytest_in_test_turns_get_py.coverage" NAME="pytest in test_turns_get.py Coverage Results" MODIFIED="1565894325744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/turns" />
-    <SUITE FILE_PATH="coverage/microverse_brain$pytest_in_test_root_get_py.coverage" NAME="pytest in test_root_get.py Coverage Results" MODIFIED="1565890093583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/microverse_brain$pytest_for_test_turns_post_test_turns_returns_204_if_turn_already_exists.coverage" NAME="pytest for test_turns_post.test_turns_returns_204_if_turn_already_exists Coverage Results" MODIFIED="1566413623087" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/turns" />
-    <SUITE FILE_PATH="coverage/microverse_brain$pytest_for_test_match_path_test_patch_match_returns_200_when_it_has_been_successfully_patched.coverage" NAME="pytest for test_match_path.test_patch_match_returns_200_when_it_has_been_successfully_patched Coverage Results" MODIFIED="1566414797735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/matches" />
-    <SUITE FILE_PATH="coverage/microverse_brain$pytest_in_test_turns_post_py.coverage" NAME="pytest in test_turns_post.py Coverage Results" MODIFIED="1565982826431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/turns" />
-    <SUITE FILE_PATH="coverage/microverse_brain$pytest_in_test_matches_get_py.coverage" NAME="pytest in test_matches_get.py Coverage Results" MODIFIED="1565888722245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/matches" />
-    <SUITE FILE_PATH="coverage/microverse_brain$pytest_for_test_match_path_test_match_returns_200_when_it_has_been_successfully_patched.coverage" NAME="pytest for test_match_path.test_match_returns_200_when_it_has_been_successfully_patched Coverage Results" MODIFIED="1566021471873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/matches" />
-    <SUITE FILE_PATH="coverage/microverse_brain$pytest_in_test_search_match_post_py.coverage" NAME="pytest in test_search_match_post.py Coverage Results" MODIFIED="1565889496039" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/matches" />
-    <SUITE FILE_PATH="coverage/microverse_brain$pytest_for_test_turn_get_test_turn_returns_content_when_there_are_turns_with_that_number_and_hero.coverage" NAME="pytest for test_turn_get.test_turn_returns_content_when_there_are_turns_with_that_number_and_hero Coverage Results" MODIFIED="1566021988823" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/turns" />
+    <SUITE FILE_PATH="coverage/battleforcastile_match_recorder$test_match_path.coverage" NAME="test_match_path Coverage Results" MODIFIED="1566646092330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/matches" />
+    <SUITE FILE_PATH="coverage/battleforcastile_match_recorder$pytest_in_bin.coverage" NAME="pytest in test_match_path.py Coverage Results" MODIFIED="1566647548452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/battleforcastile_match_recorder$test_match_get.coverage" NAME="test_match_get Coverage Results" MODIFIED="1566645850034" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/matches" />
   </component>
 </project>

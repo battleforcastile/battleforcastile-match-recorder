@@ -21,9 +21,8 @@ def test_matches_returns_empty_response_when_there_are_no_matches(init_database,
     assert b'' in rv.data
 
 
-def test_matches_returns_content_when_there_are_matches(init_database, test_client, user1, user2, match, turn):
-    db.session.add(user1)
-    db.session.add(user2)
+def test_matches_returns_content_when_there_are_matches(
+        init_database, test_client, user1_username, user2_username, match, turn):
     db.session.add(match)
     db.session.add(turn)
     db.session.commit()

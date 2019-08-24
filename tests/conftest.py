@@ -3,7 +3,7 @@ import json
 import pytest
 
 from battleforcastile_match_recorder import create_app, db
-from battleforcastile_match_recorder.models import Match, Turn, User
+from battleforcastile_match_recorder.models import Match, Turn
 
 
 @pytest.fixture(scope='function')
@@ -28,7 +28,7 @@ def init_database():
     flask_app = create_app('testing_config.py')
 
     with flask_app.app_context():
-        from battleforcastile_match_recorder.models import Turn, Match, User
+        from battleforcastile_match_recorder.models import Turn, Match
 
         # Create the database and the database table
         db.create_all()
@@ -39,27 +39,17 @@ def init_database():
 
 
 @pytest.fixture(scope='function')
-def user1():
-    user = User(
-        email='user1@example.com',
-        username='user1',
-        password='12345'
-    )
-    return user
+def user1_username():
+    return 'user1'
 
 
 @pytest.fixture(scope='function')
-def user2():
-    user = User(
-        email='user2@example.com',
-        username='user2',
-        password='12345'
-    )
-    return user
+def user2_username():
+    return 'user2'
 
 
 @pytest.fixture(scope='function')
-def turn(user1, user2, match):
+def turn(user1_username, user2_username, match):
     state = {
         'hero': {
             'value': 10
@@ -73,15 +63,15 @@ def turn(user1, user2, match):
     turn = Turn(
         match=match,
         number=1,
-        hero=user1,
-        enemy=user2,
+        hero_username=user1_username,
+        enemy_username=user2_username,
         state=json.dumps(state)
     )
     return turn
 
 
 @pytest.fixture(scope='function')
-def match(user1, user2):
+def match(user1_username, user2_username):
     character = {
         "meta": {
             "name": "Black Forest Elf",
@@ -93,9 +83,9 @@ def match(user1, user2):
         "powers": []
     }
     user = Match(
-        first_user=user1,
+        first_user_username=user1_username,
         first_user_character=json.dumps(character),
-        second_user=user2,
+        second_user_username=user2_username,
         second_user_character=json.dumps(character)
     )
     return user

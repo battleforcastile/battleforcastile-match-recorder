@@ -49,7 +49,6 @@ def initialize_extensions(app):
 
 def register_endpoints(app):
     from battleforcastile_match_recorder.endpoints.matches import MatchListResource, SearchMatchResource, MatchResource
-    from battleforcastile_match_recorder.endpoints.users import UserListResource
     from battleforcastile_match_recorder.endpoints.turns import TurnResource, TurnListResource
 
     from battleforcastile_match_recorder.endpoints.root import RootResource
@@ -62,7 +61,6 @@ def register_endpoints(app):
     api.add_resource(TurnListResource, '/api/v1/matches/<match_id>/turns/')
     api.add_resource(TurnResource, '/api/v1/matches/<match_id>/turns/<turn_number>/hero/<hero_username>/')
 
-    api.add_resource(UserListResource, '/api/v1/users/')
     api.add_resource(PrometheusResource, '/metrics')
 
     api.add_resource(RootResource, '/')

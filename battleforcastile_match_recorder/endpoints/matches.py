@@ -5,7 +5,7 @@ from flask_restful import Resource
 
 from battleforcastile_match_recorder import db
 from battleforcastile_match_recorder.metrics import num_of_matches_created_total
-from battleforcastile_match_recorder.models import Match, User
+from battleforcastile_match_recorder.models import Match
 from battleforcastile_match_recorder.serializers.matches import serialize_match
 from battleforcastile_match_recorder.utils.get_match_if_available import get_match_if_available
 
@@ -20,7 +20,7 @@ class MatchListResource(Resource):
         status_code = 200
         data = json.loads(request.data) if request.data else {}
 
-        second_user = None
+        second_user_username = None
 
         # Validate request
         if (
@@ -29,18 +29,7 @@ class MatchListResource(Resource):
                 not data.get('first_user').get('character')
         ):
             abort(400)
-
-        first_user = User.query.filter_by(username=data['first_user']['username']).first()
-        # If user doesn't exist, we create it
-        if not first_user:
-            username = data['first_user']['username']
-            first_user = User(
-                username=f'{username}',
-                email=f'{username}@example.com',
-                password=f'{username}'
-            )
-            db.session.add(first_user)
-            db.session.commit()
+        first_user_username = data.get('first_user').get('username')
 
         # If second user is provided, we make sure that it has enough information to be used
         if data.get('second_user'):
@@ -49,21 +38,22 @@ class MatchListResource(Resource):
                     not data.get('second_user').get('character')
             ):
                 abort(400)
-
-            second_user = User.query.filter_by(username=data['second_user']['username']).first()
+            second_user_username = data.get('second_user').get('username')
 
         # If there's an existing match already created and not finished we don't create a new one. We just return 200
-        existing_match = Match.query.filter_by(first_user=first_user, second_user=second_user, finished=False).first()
+        existing_match = Match.query.filter_by(
+            first_user_username=first_user_username, second_user_username=second_user_username, finished=False).first()
+
         if existing_match:
             match = existing_match
         else:
             status_code = 201
 
             match = Match(
-                first_user=first_user,
+                first_user_username=first_user_username,
                 first_user_character=json.dumps(data['first_user']['character']),
-                second_user=second_user,
-                second_user_character=json.dumps(data['second_user']['character']) if second_user else None,
+                second_user_username=second_user_username,
+                second_user_character=json.dumps(data['second_user']['character']) if second_user_username else None,
             )
             db.session.add(match)
             db.session.commit()
@@ -84,22 +74,12 @@ class SearchMatchResource(Resource):
         ):
             abort(400)
 
-        user = User.query.filter_by(username=data['user']['username']).first()
-        # If user doesn't exist, we create it
-        if not user:
-            username = data['user']['username']
-            user = User(
-                username=f'{username}',
-                email=f'{username}@example.com',
-                password=f'{username}'
-            )
-            db.session.add(user)
-            db.session.commit()
+        user_username = data.get('user').get('username')
 
-        match = get_match_if_available(user)
+        match = get_match_if_available(user_username)
         if match:
-            if match.first_user is not None and match.second_user is None:
-                match.second_user = user
+            if match.first_user_username is not None and match.second_user_username is None:
+                match.second_user_username = user_username
                 match.second_user_character = json.dumps(data['user']['character'])
                 db.session.add(match)
                 db.session.commit()
@@ -134,12 +114,9 @@ class MatchResource(Resource):
             ):
                 abort(400)
 
-            first_user = User.query.filter_by(username=data['first_user']['username']).first()
+            first_user_username = data.get('first_user').get('username')
 
-            if not first_user:
-                abort(400)
-
-            match.first_user = first_user
+            match.first_user_username = first_user_username
             match.first_user_character = json.dumps(data['first_user']['character'])
             db.session.add(match)
             db.session.commit()
@@ -151,23 +128,17 @@ class MatchResource(Resource):
             ):
                 abort(400)
 
-            second_user = User.query.filter_by(username=data['second_user']['username']).first()
+            second_user_username = data.get('second_user').get('username')
 
-            if not second_user:
-                abort(400)
-
-            match.second_user = second_user
+            match.second_user_username = second_user_username
             match.second_user_character = json.dumps(data['second_user']['character'])
             db.session.add(match)
             db.session.commit()
 
-        if data.get('winner'):
-            winner = User.query.filter_by(username=data['winner']).first()
+        if data.get('winner_username'):
+            winner = data.get('winner_username')
 
-            if not winner:
-                abort(400)
-
-            match.winner = winner
+            match.winner_username = winner
             db.session.add(match)
             db.session.commit()
 
