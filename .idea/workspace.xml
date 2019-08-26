@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55292753-c795-4966-bd56-61a3484e23ac" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helm/battleforcastile_match_recorder/.helmignore" beforeDir="false" afterPath="$PROJECT_DIR$/helm/battleforcastile-match-recorder/.helmignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helm/battleforcastile_match_recorder/Chart.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/helm/battleforcastile-match-recorder/Chart.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helm/battleforcastile_match_recorder/templates/_helpers.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/helm/battleforcastile-match-recorder/templates/_helpers.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helm/battleforcastile_match_recorder/templates/deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/helm/battleforcastile-match-recorder/templates/deployment.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helm/battleforcastile_match_recorder/templates/service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/helm/battleforcastile-match-recorder/templates/service.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helm/battleforcastile_match_recorder/templates_examples/battleforcastile_match_recorder_secrets.yml" beforeDir="false" afterPath="$PROJECT_DIR$/helm/battleforcastile-match-recorder/templates_examples/battleforcastile_match_recorder_secrets.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helm/battleforcastile_match_recorder/templates_examples/cloudsql_instance_credentials.yml" beforeDir="false" afterPath="$PROJECT_DIR$/helm/battleforcastile-match-recorder/templates_examples/battleforcastile-match-recorder-cloudsql_instance_credentials.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helm/battleforcastile_match_recorder/values.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/helm/battleforcastile-match-recorder/values.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/apply_all.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/clean_all.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/update_secret.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helm/battleforcastile-match-recorder/Chart.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/helm/battleforcastile-match-recorder/Chart.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -125,7 +115,9 @@
       <workItem from="1566644468895" duration="3202000" />
       <workItem from="1566647971033" duration="3940000" />
       <workItem from="1566672097484" duration="245000" />
-      <workItem from="1566673471977" duration="537000" />
+      <workItem from="1566673471977" duration="589000" />
+      <workItem from="1566674278995" duration="17000" />
+      <workItem from="1566682944945" duration="2410000" />
     </task>
     <task id="LOCAL-00001" summary="Remove User Model from Micro-service. Adapt models">
       <created>1566647231778</created>

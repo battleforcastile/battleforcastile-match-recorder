@@ -1,41 +1,49 @@
-FROM heroku/heroku:18-build
+FROM python:3.7.0-slim
 
-ENV DEBIAN_FRONTEND noninteractive
-ENV LC_ALL C.UTF-8
-ENV LANG C.UTF-8
-# Python, don't write bytecode!
-ENV PYTHONDONTWRITEBYTECODE 1
+RUN set -ex \
+    && buildDeps=' \
+        gcc \
+        libbz2-dev \
+        libc6-dev \
+        libgdbm-dev \
+        liblzma-dev \
+        libncurses-dev \
+        libreadline-dev \
+        libsqlite3-dev \
+        libssl-dev \
+        libpcre3-dev \
+        make \
+        tcl-dev \
+        tk-dev \
+        wget \
+        xz-utils \
+        zlib1g-dev \
+    ' \
+    && deps=' \
+        libexpat1 \
+    ' \
+    && apt-get update && apt-get install -y $buildDeps $deps --no-install-recommends  && rm -rf /var/lib/apt/lists/* \
+    && pip install uwsgi \
+    && apt-get purge -y --auto-remove $buildDeps \
+    && find /usr/local -depth \
+    \( \
+        \( -type d -a -name test -o -name tests \) \
+        -o \
+        \( -type f -a -name '*.pyc' -o -name '*.pyo' \) \
+    \) -exec rm -rf '{}' +
 
-# -- Install Pipenv:
-RUN apt update && apt install python3.7-dev libffi-dev -y
-RUN curl --silent https://bootstrap.pypa.io/get-pip.py | python3.7
+RUN pip3 install --no-cache-dir pipenv
 
-# Backwards compatility.
-RUN rm -fr /usr/bin/python3 && ln /usr/bin/python3.7 /usr/bin/python3
-
-RUN pip3 install pipenv
-
-# -- Install Application into container:
-RUN set -ex && mkdir /app
-
+RUN mkdir /app
 WORKDIR /app
 
-# -- Adding Pipfiles
-ONBUILD COPY Pipfile Pipfile
-ONBUILD COPY Pipfile.lock Pipfile.lock
+COPY Pipfile Pipfile
+COPY Pipfile.lock Pipfile.lock
 
-# -- Install dependencies:
-ONBUILD RUN set -ex && pipenv install --deploy --system
-
-# --------------------
-# - Using This File: -
-# --------------------
-
-FROM kennethreitz/pipenv
+RUN pipenv install --deploy --system
 
 COPY . /app
 
-# -- Replace with the correct path to your app's main executable
 CMD flask db upgrade && uwsgi --socket 0.0.0.0:5000 --protocol=http -w wsgi:app
 
 EXPOSE 5000
