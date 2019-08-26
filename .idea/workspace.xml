@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="55292753-c795-4966-bd56-61a3484e23ac" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helm/battleforcastile-match-recorder/Chart.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/helm/battleforcastile-match-recorder/Chart.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -117,7 +115,7 @@
       <workItem from="1566672097484" duration="245000" />
       <workItem from="1566673471977" duration="589000" />
       <workItem from="1566674278995" duration="17000" />
-      <workItem from="1566682944945" duration="2410000" />
+      <workItem from="1566682944945" duration="3186000" />
     </task>
     <task id="LOCAL-00001" summary="Remove User Model from Micro-service. Adapt models">
       <created>1566647231778</created>
