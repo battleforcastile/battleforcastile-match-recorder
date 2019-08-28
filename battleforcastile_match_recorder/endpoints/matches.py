@@ -77,7 +77,8 @@ class SearchMatchResource(Resource):
         user_username = data.get('user').get('username')
 
         match = get_match_if_available(user_username)
-        if match:
+        if match and not match.started:
+            # If the user is the second user, we need to add it to the match info
             if match.first_user_username is not None and match.second_user_username is None:
                 match.second_user_username = user_username
                 match.second_user_character = json.dumps(data['user']['character'])
@@ -139,6 +140,11 @@ class MatchResource(Resource):
             winner = data.get('winner_username')
 
             match.winner_username = winner
+            db.session.add(match)
+            db.session.commit()
+
+        if data.get('started'):
+            match.started = data.get('started')
             db.session.add(match)
             db.session.commit()
 

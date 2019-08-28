@@ -191,6 +191,7 @@ def test_patch_match_returns_200_when_it_has_been_successfully_patched(
             }
         },
         'winner_username': user1_username,
+        'started': True,
         'finished': True
     }
 
@@ -205,4 +206,5 @@ def test_patch_match_returns_200_when_it_has_been_successfully_patched(
     assert str(changed_match['second_user']['character']['stats']['level']) in json.loads(
         rv.data)['second_user']['character']
     assert user1_username == json.loads(rv.data)['winner_username']
+    assert json.loads(rv.data)['started'] == True
     assert json.loads(rv.data)['finished'] == True

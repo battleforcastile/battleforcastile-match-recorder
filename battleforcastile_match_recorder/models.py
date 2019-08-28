@@ -15,6 +15,7 @@ class Match(db.Model):
 
     winner_username = db.Column(db.String(80), nullable=True)
 
+    started = db.Column(db.Boolean, default=False)
     finished = db.Column(db.Boolean, default=False)
 
     created_at = db.Column(db.DateTime, nullable=False,

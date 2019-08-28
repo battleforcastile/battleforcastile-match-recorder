@@ -11,5 +11,6 @@ def serialize_match(match):
            'character': match.second_user_character if match.second_user_character else None
        },
         'winner_username': match.winner_username if match.winner_username else None,
+        'started': match.finished,
         'finished': match.finished
     }

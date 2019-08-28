@@ -27,7 +27,8 @@ class TurnListResource(Resource):
         ):
             abort(400)
 
-        match = Match.query.filter_by(id=match_id).first()
+        # We only create turns for current matches.
+        match = Match.query.filter_by(id=match_id, started=True, finished=False).first()
         if not match:
             abort(400)
 
