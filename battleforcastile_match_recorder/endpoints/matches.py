@@ -1,9 +1,11 @@
+import datetime
 import json
 
 from flask import request, abort
 from flask_restful import Resource
 
 from battleforcastile_match_recorder import db
+from battleforcastile_match_recorder.constants import MAX_NUM_SECONDS_SINCE_CREATION
 from battleforcastile_match_recorder.metrics import num_of_matches_created_total
 from battleforcastile_match_recorder.models import Match
 from battleforcastile_match_recorder.serializers.matches import serialize_match
@@ -77,7 +79,9 @@ class SearchMatchResource(Resource):
         user_username = data.get('user').get('username')
 
         match = get_match_if_available(user_username)
-        if match and not match.started:
+        if (match and not match.started and
+                match.created_at > datetime.datetime.utcnow() - datetime.timedelta(
+                    seconds=MAX_NUM_SECONDS_SINCE_CREATION)):
             # If the user is the second user, we need to add it to the match info
             if match.first_user_username is not None and match.second_user_username is None:
                 match.second_user_username = user_username

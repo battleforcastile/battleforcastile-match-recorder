@@ -1,3 +1,4 @@
+import datetime
 import json
 
 from battleforcastile_match_recorder import db
@@ -133,6 +134,52 @@ def test_search_match_returns_204_if_there_are_no_matches_available(init_databas
     # Second, we make a request to search for free matches
     rv = test_client.post('/api/v1/matches/search/', data=json.dumps(finding_match))
 
+    assert rv.status_code == 204
+
+
+def test_search_match_returns_204_if_there_are_no_matches_recently_created(init_database, test_client, user1_username):
+    new_match = {
+        'first_user': {
+            'username': user1_username,
+            'character': {
+                "meta": {
+                    "name": "Black Forest Elf",
+                    "class": "creatures"
+                },
+                "stats": {
+                    "level": 1
+                },
+                "powers": []
+            }
+        }
+    }
+
+    # First, we create a match to choose from
+    rv = test_client.post('/api/v1/matches/', data=json.dumps(new_match))
+    assert rv.status_code == 201
+
+    created_match = Match.query.filter_by(first_user_username=user1_username).first()
+    created_match.created_at = datetime.datetime.utcnow() - datetime.timedelta(days=10)
+    db.session.add(created_match)
+    db.session.commit()
+
+    finding_match = {
+        'user': {
+            'username': user1_username,
+            'character': {
+                "meta": {
+                    "name": "Black Forest Elf",
+                    "class": "creatures"
+                },
+                "stats": {
+                    "level": 1
+                },
+                "powers": []
+            }
+        }
+    }
+
+    rv = test_client.post('/api/v1/matches/search/', data=json.dumps(finding_match))
     assert rv.status_code == 204
 
 
