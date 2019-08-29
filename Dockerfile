@@ -44,6 +44,6 @@ RUN pipenv install --deploy --system
 
 COPY . /app
 
-CMD flask db upgrade && uwsgi --socket 0.0.0.0:5000 --protocol=http -w wsgi:app
+CMD flask db upgrade && uwsgi --socket 0.0.0.0:5000 --protocol=http --lazy-apps --enable-threads --logger-req="stdio" -w wsgi:app
 
 EXPOSE 5000

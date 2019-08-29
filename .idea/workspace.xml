@@ -4,7 +4,10 @@
     <list default="true" id="55292753-c795-4966-bd56-61a3484e23ac" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helm/battleforcastile-match-recorder/templates/deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/helm/battleforcastile-match-recorder/templates/deployment.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/battleforcastile_match_recorder/endpoints/matches.py" beforeDir="false" afterPath="$PROJECT_DIR$/battleforcastile_match_recorder/endpoints/matches.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/battleforcastile_match_recorder/utils/get_matches_available.py" beforeDir="false" afterPath="$PROJECT_DIR$/battleforcastile_match_recorder/utils/get_matches_available.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/matches/test_matches_post.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/matches/test_matches_post.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/utils/test_get_match_if_available.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/utils/test_get_matches_available.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +79,7 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -143,7 +146,7 @@
       <workItem from="1566672097484" duration="245000" />
       <workItem from="1566673471977" duration="589000" />
       <workItem from="1566674278995" duration="17000" />
-      <workItem from="1566682944945" duration="18306000" />
+      <workItem from="1566682944945" duration="24922000" />
     </task>
     <task id="LOCAL-00001" summary="Remove User Model from Micro-service. Adapt models">
       <created>1566647231778</created>
@@ -178,11 +181,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tests/matches/test_matches_post.py</url>
-          <line>45</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/tests/matches/test_match_path.py</url>
           <line>207</line>

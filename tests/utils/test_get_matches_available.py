@@ -1,10 +1,10 @@
 
 from battleforcastile_match_recorder import db
 from battleforcastile_match_recorder.models import Match
-from battleforcastile_match_recorder.utils.get_match_if_available import get_match_if_available
+from battleforcastile_match_recorder.utils.get_matches_available import get_matches_available
 
 
-def test_get_match_if_available_if_all_matches_are_finished(init_database, user1_username, user2_username):
+def test_get_matches_available_if_all_matches_are_finished(init_database, user1_username, user2_username):
     character1 = '{}'
     character2 = '{}'
 
@@ -14,9 +14,9 @@ def test_get_match_if_available_if_all_matches_are_finished(init_database, user1
     db.session.add(match1)
     db.session.commit()
 
-    found_match = get_match_if_available(user1_username)
+    found_matches = get_matches_available(user1_username)
 
-    assert found_match is None
+    assert found_matches == []
 
 
 def test_get_match_if_available_takes_match_already_assigned_where_user_is_assigned_as_first(
@@ -31,9 +31,9 @@ def test_get_match_if_available_takes_match_already_assigned_where_user_is_assig
     db.session.add(match1)
     db.session.commit()
 
-    found_match = get_match_if_available(user1_username)
+    found_matches = get_matches_available(user1_username)
 
-    assert found_match == match1
+    assert found_matches == [match1]
 
 
 def test_get_match_if_available_takes_match_already_assigned_where_user_is_assigned_as_second(
@@ -48,9 +48,9 @@ def test_get_match_if_available_takes_match_already_assigned_where_user_is_assig
     db.session.add(match1)
     db.session.commit()
 
-    found_match = get_match_if_available(user2_username)
+    found_matches = get_matches_available(user2_username)
 
-    assert found_match == match1
+    assert found_matches == [match1]
 
 
 def test_get_match_if_available_takes_match_with_a_free_slot(
@@ -63,11 +63,11 @@ def test_get_match_if_available_takes_match_with_a_free_slot(
     db.session.add(match1)
     db.session.commit()
 
-    found_match = get_match_if_available(user2_username)
+    found_matches = get_matches_available(user2_username)
 
-    assert found_match == match1
+    assert found_matches == [match1]
 
-def test_get_match_if_available_if_there_are_matches_but_the_matches_were_all_created_by_the_same_user(
+def test_get_matches_available_if_there_are_matches_but_the_matches_were_all_created_by_the_same_user(
         init_database, user1_username):
 
     character = '{}'
@@ -76,13 +76,13 @@ def test_get_match_if_available_if_there_are_matches_but_the_matches_were_all_cr
     db.session.add(match1)
     db.session.commit()
 
-    found_match = get_match_if_available(user1_username)
+    found_matches = get_matches_available(user1_username)
 
-    assert found_match is None
+    assert found_matches == []
 
 
-def test_get_match_if_available_if_there_are_no_matches(init_database, user2_username):
+def test_get_matches_available_if_there_are_no_matches(init_database, user2_username):
 
-    found_match = get_match_if_available(user2_username)
+    found_matches = get_matches_available(user2_username)
 
-    assert found_match is None
+    assert found_matches == []
