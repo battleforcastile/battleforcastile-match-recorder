@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="55292753-c795-4966-bd56-61a3484e23ac" name="Default Changelist" comment="Extend API so the match-finding process is simplified">
-      <change afterPath="$PROJECT_DIR$/battleforcastile_match_recorder/utils/has_match_timeout.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/utils/test_has_match_timeout.py" afterDir="false" />
+    <list default="true" id="55292753-c795-4966-bd56-61a3484e23ac" name="Default Changelist" comment="Add Structured logging">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/battleforcastile_match_recorder/endpoints/matches.py" beforeDir="false" afterPath="$PROJECT_DIR$/battleforcastile_match_recorder/endpoints/matches.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/battleforcastile_match_recorder/serializers/matches.py" beforeDir="false" afterPath="$PROJECT_DIR$/battleforcastile_match_recorder/serializers/matches.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helm/battleforcastile-match-recorder/templates/deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/helm/battleforcastile-match-recorder/templates/deployment.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -149,7 +145,7 @@
       <workItem from="1566673471977" duration="589000" />
       <workItem from="1566674278995" duration="17000" />
       <workItem from="1566682944945" duration="26242000" />
-      <workItem from="1567233088216" duration="10486000" />
+      <workItem from="1567233088216" duration="16217000" />
     </task>
     <task id="LOCAL-00001" summary="Remove User Model from Micro-service. Adapt models">
       <created>1566647231778</created>
@@ -179,7 +175,21 @@
       <option name="project" value="LOCAL" />
       <updated>1567241185307</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Return information about whether a match has timeout or not">
+      <created>1567244058015</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1567244058015</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add Structured logging">
+      <created>1567263765563</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1567263765563</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,7 +211,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Remove User Model from Micro-service. Adapt models" />
     <MESSAGE value="Extend API so the match-finding process is simplified" />
-    <option name="LAST_COMMIT_MESSAGE" value="Extend API so the match-finding process is simplified" />
+    <MESSAGE value="Return information about whether a match has timeout or not" />
+    <MESSAGE value="Add Structured logging" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Structured logging" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -210,11 +222,6 @@
           <url>file://$PROJECT_DIR$/tests/matches/test_match_path.py</url>
           <line>207</line>
           <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tests/utils/test_has_match_timeout.py</url>
-          <line>2</line>
-          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
