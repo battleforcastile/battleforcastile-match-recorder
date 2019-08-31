@@ -32,52 +32,6 @@ def test_matches_are_successfully_created_when_passing_just_the_first_user(
     assert serialize_match(created_match) == json.loads(rv.data)
 
 
-def test_matches_are_successfully_created_but_only_one_per_first_user(
-        init_database, test_client, user1_username, user2_username):
-    db.session.commit()
-
-    new_match = {
-        'first_user': {
-            'username': user1_username,
-            'character': {
-                "meta": {
-                    "name": "Black Forest Elf",
-                    "class": "creatures"
-                },
-                "stats": {
-                    "level": 1
-                },
-                "powers": []
-            }
-        }
-    }
-    rv = test_client.post('/api/v1/matches/', data=json.dumps(new_match))
-
-    created_match = Match.query.filter_by(first_user_username=user1_username, second_user_username=None).first()
-
-    assert rv.status_code == 201
-    assert created_match is not None
-
-    new_match = {
-        'first_user': {
-            'username': user1_username,
-            'character': {
-                "meta": {
-                    "name": "Black Forest Elf",
-                    "class": "creatures"
-                },
-                "stats": {
-                    "level": 1
-                },
-                "powers": []
-            }
-        }
-    }
-    rv = test_client.post('/api/v1/matches/', data=json.dumps(new_match))
-
-    assert rv.status_code == 200
-
-
 def test_matches_are_successfully_created_when_only_first_user_is_provided_and_user_needs_to_be_created(
         init_database, test_client):
 

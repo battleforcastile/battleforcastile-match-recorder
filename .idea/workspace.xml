@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="55292753-c795-4966-bd56-61a3484e23ac" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/battleforcastile_match_recorder/endpoints/matches.py" beforeDir="false" afterPath="$PROJECT_DIR$/battleforcastile_match_recorder/endpoints/matches.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/battleforcastile_match_recorder/utils/get_matches_available.py" beforeDir="false" afterPath="$PROJECT_DIR$/battleforcastile_match_recorder/utils/get_matches_available.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/matches/test_matches_post.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/matches/test_matches_post.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/utils/test_get_match_if_available.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/utils/test_get_matches_available.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,13 +26,14 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/matches" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests/matches" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -65,7 +63,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/matches/test_search_match_post.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/matches/test_join_match_post.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -103,7 +101,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest in test_search_match_post.py" type="tests" factoryName="py.test" nameIsGenerated="true">
+    <configuration name="pytest in test_join_match_post.py" type="tests" factoryName="py.test" nameIsGenerated="true">
       <module name="battleforcastile-match-recorder" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -115,14 +113,14 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/matches/test_search_match_post.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/matches/test_join_match_post.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Flask server.Flask" />
       <item itemvalue="Python.test_search_match_post" />
-      <item itemvalue="Python tests.pytest in test_search_match_post.py" />
+      <item itemvalue="Python tests.pytest in test_join_match_post.py" />
     </list>
     <recent_temporary>
       <list>
@@ -146,7 +144,8 @@
       <workItem from="1566672097484" duration="245000" />
       <workItem from="1566673471977" duration="589000" />
       <workItem from="1566674278995" duration="17000" />
-      <workItem from="1566682944945" duration="24922000" />
+      <workItem from="1566682944945" duration="26242000" />
+      <workItem from="1567233088216" duration="8267000" />
     </task>
     <task id="LOCAL-00001" summary="Remove User Model from Micro-service. Adapt models">
       <created>1566647231778</created>
@@ -155,7 +154,28 @@
       <option name="project" value="LOCAL" />
       <updated>1566647231778</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Extend API so the match-finding process is simplified">
+      <created>1567238987350</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1567238987350</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Extend API so the match-finding process is simplified">
+      <created>1567239700516</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1567239700516</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Extend API so the match-finding process is simplified">
+      <created>1567241185307</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1567241185307</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,7 +196,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Remove User Model from Micro-service. Adapt models" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove User Model from Micro-service. Adapt models" />
+    <MESSAGE value="Extend API so the match-finding process is simplified" />
+    <option name="LAST_COMMIT_MESSAGE" value="Extend API so the match-finding process is simplified" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

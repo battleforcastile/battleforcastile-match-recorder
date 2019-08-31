@@ -19,47 +19,27 @@ def test_get_matches_available_if_all_matches_are_finished(init_database, user1_
     assert found_matches == []
 
 
-def test_get_match_if_available_takes_match_already_assigned_where_user_is_assigned_as_first(
-        init_database, user1_username, user2_username):
-
+def test_get_matches_available_if_all_matches_are_started(init_database, user1_username, user2_username):
     character1 = '{}'
     character2 = '{}'
 
     match1 = Match(
         first_user_username=user1_username, first_user_character=character1,
-        second_user_username=user2_username, second_user_character=character2, finished=False)
+        second_user_username=user2_username, second_user_character=character2, started=True)
     db.session.add(match1)
     db.session.commit()
 
     found_matches = get_matches_available(user1_username)
 
-    assert found_matches == [match1]
+    assert found_matches == []
 
-
-def test_get_match_if_available_takes_match_already_assigned_where_user_is_assigned_as_second(
-        init_database, user1_username, user2_username):
-
-    character1 = '{}'
-    character2 = '{}'
-
-    match1 = Match(
-        first_user_username=user1_username, first_user_character=character1,
-        second_user_username=user2_username, second_user_character=character2, finished=False)
-    db.session.add(match1)
-    db.session.commit()
-
-    found_matches = get_matches_available(user2_username)
-
-    assert found_matches == [match1]
-
-
-def test_get_match_if_available_takes_match_with_a_free_slot(
+def test_get_matches_available_returns_match_with_a_free_slot(
         init_database, user1_username, user2_username):
 
     character1 = '{}'
 
     match1 = Match(
-        first_user_username=user1_username, first_user_character=character1, finished=False)
+        first_user_username=user1_username, first_user_character=character1, started=False, finished=False)
     db.session.add(match1)
     db.session.commit()
 
