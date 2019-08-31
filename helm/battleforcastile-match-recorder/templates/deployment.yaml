@@ -60,7 +60,7 @@ spec:
                   name: battleforcastile-match-recorder-secrets
                   key: sqlalchemy_database_uri
             - name: PRODUCTION_MODE
-              key: true
+              value: "true"
           livenessProbe:
             httpGet:
               path: /

@@ -1,5 +1,4 @@
 import google.cloud.logging
-import datetime
 import json
 import os
 
@@ -8,11 +7,11 @@ from flask_restful import Resource, inputs
 from flask_restful import reqparse
 
 from battleforcastile_match_recorder import db
-from battleforcastile_match_recorder.constants import MAX_NUM_SECONDS_SINCE_CREATION
 from battleforcastile_match_recorder.metrics import num_of_matches_created_total
 from battleforcastile_match_recorder.models import Match
 from battleforcastile_match_recorder.serializers.matches import serialize_match
 from battleforcastile_match_recorder.utils.get_matches_available import get_matches_available
+from battleforcastile_match_recorder.utils.has_match_timeout import has_match_timeout
 
 if os.getenv('PRODUCTION_MODE'):
     client = google.cloud.logging.Client()
@@ -103,9 +102,7 @@ class JoinMatchResource(Resource):
                          f'But it might have already started or be too old. '
                          f'Started: {match.started}. Created at: {match.created_at}')
 
-            if (match.created_at > datetime.datetime.utcnow() - datetime.timedelta(
-                    seconds=MAX_NUM_SECONDS_SINCE_CREATION)):
-
+            if not has_match_timeout(match):
                 logging.info(
                     f'[JOIN MATCH] Match {match.id} was found. {user_username} is going to join (as a second user)')
 

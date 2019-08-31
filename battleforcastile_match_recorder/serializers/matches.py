@@ -1,3 +1,6 @@
+from battleforcastile_match_recorder.utils.has_match_timeout import has_match_timeout
+
+
 def serialize_match(match):
     return {
         'id': match.id,
@@ -12,5 +15,6 @@ def serialize_match(match):
        },
         'winner_username': match.winner_username if match.winner_username else None,
         'started': match.finished,
-        'finished': match.finished
+        'finished': match.finished,
+        'timeout': has_match_timeout(match)
     }
