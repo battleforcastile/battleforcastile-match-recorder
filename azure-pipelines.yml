@@ -20,7 +20,7 @@ steps:
 - script: pipenv install --dev
   displayName: 'Install dependencies'
 
-- script: pytest tests --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
+- script: pipenv run pytest tests --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
   displayName: 'Run unittests'
 
 - task: PublishTestResults@2
