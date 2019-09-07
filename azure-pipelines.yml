@@ -40,12 +40,16 @@ steps:
   displayName: Build an image
   inputs:
     repository: 'battleforcastile-match-recorder'
-    command: build
     Dockerfile: Dockerfile
+    tags: |
+      latest
+    command: build
 
 
 - task: Docker@2
   inputs:
     containerRegistry: 'DockerHub'
     repository: 'battleforcastile-match-recorder'
+    tags: |
+      latest
     command: 'push'
