@@ -35,21 +35,15 @@ steps:
     summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/coverage.xml'
     reportDirectory: '$(System.DefaultWorkingDirectory)/**/htmlcov'
 
-
 - task: Docker@2
-  displayName: Build an image
   inputs:
-    repository: 'battleforcastile-match-recorder'
-    Dockerfile: Dockerfile
-    tags: |
-      latest
-    command: build
+    containerRegistry: 'DockerHub'
+    command: 'login'
 
 
 - task: Docker@2
   inputs:
     containerRegistry: 'DockerHub'
     repository: 'battleforcastile-match-recorder'
-    tags: |
-      latest
-    command: 'push'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
