@@ -20,5 +20,5 @@ steps:
 - script: pipenv install --dev
   displayName: 'Install dependencies'
 
-- script: nosetests
+- script: pipenv run nosetests
   displayName: 'Run unittests'
