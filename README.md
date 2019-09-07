@@ -52,18 +52,11 @@ kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admi
 kubectl patch deploy --namespace kube-system tiller-deploy -p '{"spec":{"template":{"spec":{"serviceAccount":"tiller"}}}}'
 ```
 
-#### 1.7 Go to `/helm/batteforcastile-match-recorder/` folder and copy the content from `templates-examples` to `templates`
-```
-cp helm/batteforcastile-match-recorder/templates-examples/* helm/batteforcastile-match-recorder/templates/*
-```
+#### 1.7 Go to `/helm/battleforcastile-match-recorder/values.yml` and replace the `instance_connection_name` by the one you get from Google cloud (It will be something like `<project>:<zone>:<sql_instance_name>`)
 
-#### 1.8 Uncomment the content from `batteforcastile-match-recorder-cloudsql-instance-credentials.yml` (from `templates`) and replace:
- - The value of `credentials.json` by the `base64` value we wrote down previously (`key.json`)
+#### 1.8 Run `helm install helm/battleforcastile-match-recorder --set cloudsqlcredentials=... --set secretkey=... --set sqlalchemydatabaseuri=...` and in a few minutes it should be deployed! :)
 
-#### 1.9 Uncomment the content from `battleforcastile-match-recorder-secrets.yml` (from `templates`) and replace:
- - The value of `secret_key` by the `base64` value of the secret key of your Flask App (can be random)
- - The value of `sqlalchemy_database_uri` by the `base64` value of the DB URI from Google Cloud (It will be something like `postgresql+pg8000://<db_user>:<db_password>@127.0.0.1:5432/<database_name>`)
+* The value of `cloudsqlcredentials` is the `base64` value we wrote down previously (`key.json`)
+* The value of `secretkey` is the `base64` value of the secret key of your Flask App (can be random)
+* The value of `sqlalchemydatabaseuri` is the `base64` value of the DB URI from Google Cloud (It will be something like `postgresql+pg8000://<db_user>:<db_password>@127.0.0.1:5432/<database_name>`)
 
-#### 1.10 Go to `/helm/batteforcastile-match-recorder/values.yml` and replace the `instance_connection_name` by the one you get from Google cloud (It will be something like `<project>:<zone>:<sql_instance_name>`)
-
-#### 1.11 Run `helm install helm/batteforcastile-match-recorder` and in a few minutes it should be deployed! :)

@@ -8,7 +8,7 @@ database:
   instance_connection_name: battle-for-castile:europe-west1:battleforcastile-prod  # Change this for your instance
 
 image_battleforcastile_match_recorder:
-  repository: gcr.io/battle-for-castile/battleforcastile/battleforcastile-match-recorder
+  repository: battleforcastile/battleforcastile-match-recorder
   tag: latest
   pullPolicy: Always
   container_port: 5000

@@ -49,3 +49,6 @@ steps:
     Dockerfile: '**/Dockerfile'
     tags: |
       latest
+
+- publish: $(System.DefaultWorkingDirectory)/helm/battleforcastile-match-recorder
+  artifact: helm-chart
