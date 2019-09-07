@@ -44,7 +44,7 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'DockerHub'
-    repository: 'battleforcastile-match-recorder'
+    repository: 'battleforcastile/battleforcastile-match-recorder'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
     tags: |
