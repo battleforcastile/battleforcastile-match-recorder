@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="55292753-c795-4966-bd56-61a3484e23ac" name="Default Changelist" comment="Add Structured logging">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/battleforcastile_match_recorder/endpoints/matches.py" beforeDir="false" afterPath="$PROJECT_DIR$/battleforcastile_match_recorder/endpoints/matches.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +24,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/utils" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -145,7 +144,7 @@
       <workItem from="1566673471977" duration="589000" />
       <workItem from="1566674278995" duration="17000" />
       <workItem from="1566682944945" duration="26242000" />
-      <workItem from="1567233088216" duration="16217000" />
+      <workItem from="1567233088216" duration="18740000" />
     </task>
     <task id="LOCAL-00001" summary="Remove User Model from Micro-service. Adapt models">
       <created>1566647231778</created>
