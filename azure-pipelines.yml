@@ -47,3 +47,5 @@ steps:
     repository: 'battleforcastile-match-recorder'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
+    tags: |
+      latest
