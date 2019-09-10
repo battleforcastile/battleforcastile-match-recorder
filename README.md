@@ -1,6 +1,6 @@
 # Battle For Castile: Match Recorder
 
-[![CircleCI](https://circleci.com/gh/battleforcastile/battleforcastile-match-recorder/tree/master.svg?style=svg)](https://circleci.com/gh/battleforcastile/battleforcastile-match-recorder/tree/master)
+[![Build Status](https://dev.azure.com/javidgon/Battleforcastile/_apis/build/status/battleforcastile.battleforcastile-match-recorder?branchName=master)](https://dev.azure.com/javidgon/Battleforcastile/_build/latest?definitionId=1&branchName=master)
 
 This micro-service handles the Match Recording process.
 
