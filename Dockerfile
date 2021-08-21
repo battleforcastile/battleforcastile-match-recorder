@@ -32,6 +32,7 @@ RUN set -ex \
         \( -type f -a -name '*.pyc' -o -name '*.pyo' \) \
     \) -exec rm -rf '{}' +
 
+RUN pip3 install --upgrade pip
 RUN pip3 install --no-cache-dir pipenv
 
 RUN mkdir /app

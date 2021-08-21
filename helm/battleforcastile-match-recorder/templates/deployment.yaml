@@ -1,4 +1,4 @@
-apiVersion: apps/v1beta2
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: battleforcastile-match-recorder-deployment
@@ -23,24 +23,6 @@ spec:
           secret:
             secretName: battleforcastile-match-recorder-cloudsql-instance-credentials
       containers:
-        - name: battleforcastile-match-recorder-cloudsql-proxy
-          image: "{{ .Values.image_cloudsql_proxy.repository }}:{{ .Values.image_cloudsql_proxy.tag }}"
-          imagePullPolicy: {{ .Values.image_cloudsql_proxy.pullPolicy }}
-          command: ["/cloud_sql_proxy",
-                    "-instances={{ .Values.database.instance_connection_name}}=tcp:5432",
-            # If running on a VPC, the Cloud SQL proxy can connect via Private IP. See:
-            # https://cloud.google.com/sql/docs/mysql/private-ip for more info.
-            # "-ip_address_types=PRIVATE",
-                    "-credential_file=/secrets/cloudsql/credentials.json"]
-          # [START cloudsql_security_context]
-          securityContext:
-            runAsUser: 2  # non-root user
-            allowPrivilegeEscalation: false
-          # [END cloudsql_security_context]
-          volumeMounts:
-            - name: battleforcastile-match-recorder-cloudsql-instance-credentials
-              mountPath: /secrets/cloudsql
-              readOnly: true
         - name: battleforcastile-match-recorder
           image: "{{ .Values.image_battleforcastile_match_recorder.repository }}:{{ .Values.image_battleforcastile_match_recorder.tag }}"
           imagePullPolicy: {{ .Values.image_battleforcastile_match_recorder.pullPolicy }}
@@ -59,8 +41,8 @@ spec:
                 secretKeyRef:
                   name: battleforcastile-match-recorder-secrets
                   key: sqlalchemy_database_uri
-            - name: PRODUCTION_MODE
-              value: "true"
+            # - name: PRODUCTION_MODE
+            #   value: "true"
           livenessProbe:
             httpGet:
               path: /
